@@ -1,0 +1,20 @@
+{
+  "name": "Homegear",
+  "version": "stable",
+  "slug": "rpi-homegear",
+  "description": "Homegear",
+  "startup": "before",
+  "boot": "auto",
+  "ports": {
+    "2001/tcp": 2001,
+    "2002/tcp": 2002,
+    "2003/tcp": 2003
+  },
+  "environment": {
+  },
+  "options": {
+  },
+  "schema": {
+  },
+  "devices": ["/dev/ttyAMA0:/dev/ttyAMA0:rwm"]
+}
