@@ -2,7 +2,7 @@
   "name": "Homegear",
   "version": "stable",
   "slug": "rpi-homegear",
-  "description": "Homegear",
+  "description": "Homegear as a Hassio add-on",
   "startup": "before",
   "boot": "auto",
   "gpio": true,
@@ -10,6 +10,7 @@
     "SYS_ADMIN",
     "SYS_RAWIO"
   ],
+  "map": ["config:rw", "share:rw"],
   "ports": {
     "2001/tcp": 2001,
     "2002/tcp": 2002,
