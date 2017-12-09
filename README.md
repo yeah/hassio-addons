@@ -18,9 +18,9 @@ Homegear logs will be in `/share/homegear/log`.
 
 ## Limitations
 
-Works for me™, but your mileage may vary. I've tested Homematic/MAX! with an RPi3 and an [SCC](http://busware.de/tiki-index.php?page=SCC) so far.
+Works for me™, but your mileage may vary. I've tested Homematic/MAX! with an Raspberry Pi 3 and an [SCC](http://busware.de/tiki-index.php?page=SCC) so far.
 
-This add-on will only work on Respberry Pi due to the fact that the `resin/rpi-raspbian:stretch` base image is used.
+This add-on will only work on Raspberry Pi due to the fact that the `resin/rpi-raspbian:stretch` base image is used.
 
 Pull requests are *very* welcome, especially to make this add-on work on other platforms.
 
