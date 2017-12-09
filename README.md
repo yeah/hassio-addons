@@ -4,7 +4,7 @@ This add-on repository contains the Homegear add-on for Hassio (Home Assistant).
 
 ## Installation
 
-Add this repo to Hassio as [described here](https://home-assistant.io/hassio/installing_third_party_addons/).
+Add this repo to Hassio as [described here](https://home-assistant.io/hassio/installing_third_party_addons/) and install the **Homegear** add-on.
 
 ## How it works
 
