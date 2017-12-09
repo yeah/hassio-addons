@@ -14,7 +14,7 @@ Pull requests are *very* welcome!
 
 ## License
 
-Copyright (c) 2011-2017 Jan (@yeah on GitHub).
+Copyright (c) 2017 Jan (@yeah on GitHub).
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
