@@ -1,3 +1,4 @@
+# Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
 FROM resin/rpi-raspbian:stretch
 MAINTAINER Jan Schulz-Hofen <hassio@0.jan.sh>
 

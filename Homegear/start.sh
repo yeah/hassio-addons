@@ -1,5 +1,7 @@
 #/bin/bash
 
+# Inspired by https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/start.sh
+
 mkdir -p /config/homegear /share/homegear/lib /share/homegear/log
 chown homegear:homegear /config/homegear /share/homegear/lib /share/homegear/log
 rm -Rf /etc/homegear /var/lib/homegear /var/log/homegear
