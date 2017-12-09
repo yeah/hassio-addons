@@ -6,6 +6,14 @@ This add-on repository contains the Homegear add-on for Hassio (Home Assistant).
 
 Add this repo to Hassio as [described here](https://home-assistant.io/hassio/installing_third_party_addons/).
 
+## How it works
+
+A folder named `homegear/` will be added to the `/config` directory of your Hassio installation. `/config` is where all you other Home Assistant config files live as well. You can [access it via Samba](https://home-assistant.io/addons/samba/) for example. `/config/homegear` corresponds to `/etc/homegear` in Homegear. You will need to add your configuration according to the [Homegear docs](https://doc.homegear.eu/data/homegear/configuration.html).
+
+Homegear usually stores its database and other variable data in `/var/lib/homegear`. This directory will be mapped to `/share/homegear/lib` in Hassio. **It is advisable to perform backups of this folder!**
+
+Homegear logs will be in `/share/homegear/log`.
+
 ## Limitations
 
 Works for me™, but your mileage may vary. Only works on `armhf` (Raspberry Pi) currently.
