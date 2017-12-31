@@ -22,5 +22,8 @@
   },
   "schema": {
   },
-  "devices": ["/dev/ttyAMA0:/dev/ttyAMA0:rwm"]
+  "devices": [
+    "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
+    "/dev/ttyACM0:/dev/ttyACM0:rwm"
+  ]
 }
