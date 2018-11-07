@@ -1,7 +1,6 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
 FROM arm32v7/debian:stretch
 MAINTAINER Sathya Laufer <sathya@homegear.email>
-COPY qemu-arm-static /usr/bin/qemu-arm-static
 
 RUN apt-get update && apt-get -y install apt-transport-https wget ca-certificates apt-utils gnupg libzip4 libavahi-client3 libavahi-client-dev insserv
 RUN \
