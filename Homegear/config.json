@@ -11,11 +11,7 @@
     "SYS_RAWIO"
   ],
   "map": ["config:rw", "share:rw"],
-  "ports": {
-    "2001/tcp": 2001,
-    "2002/tcp": 2002,
-    "2003/tcp": 2003
-  },
+  "host_network": true,
   "environment": {
   },
   "options": {
