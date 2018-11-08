@@ -1,24 +1,6 @@
 #/bin/bash
 
 # Inspired by https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/start.sh
-_term() {
-	service homegear-influxdb stop
-	service homegear stop
-	exit $?
-}
-
-trap _term SIGTERM
-
-USER=homegear
-
-USER_ID=$(id -u $USER)
-USER_GID=$(id -g $USER)
-
-USER_ID=${HOST_USER_ID:=$USER_ID}
-USER_GID=${HOST_USER_GID:=$USER_GID}
-
-sed -i -e "s/^${USER}:\([^:]*\):[0-9]*:[0-9]*/${USER}:\1:${USER_ID}:${USER_GID}/"  /etc/passwd
-sed -i -e "s/^${USER}:\([^:]*\):[0-9]*/${USER}:\1:${USER_GID}/" /etc/group
 
 mkdir -p /config/homegear /share/homegear/lib /share/homegear/log
 chown homegear:homegear /config/homegear /share/homegear/lib /share/homegear/log
@@ -56,6 +38,7 @@ if ! [ -f /etc/homegear/dh1024.pem ]; then
 	chmod 400 /etc/homegear/dh1024.pem
 fi
 
+chown -R root:root /etc/homegear
 find /etc/homegear -type d -exec chmod 755 {} \;
 chown -R homegear:homegear /var/log/homegear /var/lib/homegear
 find /var/log/homegear -type d -exec chmod 750 {} \;
@@ -63,7 +46,11 @@ find /var/log/homegear -type f -exec chmod 640 {} \;
 find /var/lib/homegear -type d -exec chmod 750 {} \;
 find /var/lib/homegear -type f -exec chmod 640 {} \;
 
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 service homegear start
 service homegear-management start
 service homegear-influxdb start
-tail -f /var/log/homegear/homegear.log
+tail -f /var/log/homegear/homegear.log &
+child=$!
+wait "$child"
