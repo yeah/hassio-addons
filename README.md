@@ -8,6 +8,12 @@ Add this repo to Hassio as [described here](https://home-assistant.io/hassio/ins
 
 Don't get nervous after you've hit **Install**. Depending on your hardware, it may take up to half an hour before Homegear is installed. Once it appears in the list of installed add-ons, you'll have to **open** and **start** it.
 
+## Debug
+
+```
+docker exec -it <mycontainer> bash
+```
+
 ## How it works
 
 A folder named `homegear/` will be added to the `/config` directory of your Hassio installation. `/config` is where all your other Home Assistant config files live as well. You can [access it via Samba](https://home-assistant.io/addons/samba/) for example. `/config/homegear` corresponds to `/etc/homegear` in Homegear. You will need to add your configuration according to the [Homegear docs](https://doc.homegear.eu/data/homegear/configuration.html).
