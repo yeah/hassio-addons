@@ -58,7 +58,8 @@ fi
 
 chown -R root:root /etc/homegear
 find /etc/homegear -type d -exec chmod 755 {} \;
-chown -R homegear:homegear /var/log/homegear /var/lib/homegear
+chown -R homegear:homegear /var/log/homegear 
+chown -R homegear:homegear /var/lib/homegear
 find /var/log/homegear -type d -exec chmod 750 {} \;
 find /var/log/homegear -type f -exec chmod 640 {} \;
 find /var/lib/homegear -type d -exec chmod 750 {} \;
