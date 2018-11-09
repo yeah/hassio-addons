@@ -46,7 +46,7 @@ RUN \
 #    cp -R /etc/homegear /etc/homegear.config; \
 #    cp -R /var/lib/homegear /var/lib/homegear.data; \
 #    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
+COPY installNightly.sh /installNightly.sh
 RUN \
     touch /tmp/HOMEGEAR_STATIC_INSTALLATION; \
     wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key; \
