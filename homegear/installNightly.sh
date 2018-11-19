@@ -8,7 +8,7 @@ SCRIPTDIR="$( cd "$(dirname $0)" && pwd )"
 
 apt-get update
 system="debian_stretch"
-arch="armhf"
+arch="amd64"
 
 function downloadModule {
 	wget https://homegear.eu/downloads/nightlies/${1} || exit 1

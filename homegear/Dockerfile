@@ -1,5 +1,5 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
-FROM arm32v7/debian:stretch
+FROM debian:stretch
 MAINTAINER Sathya Laufer <sathya@homegear.email>
 
 RUN \
