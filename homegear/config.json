@@ -1,0 +1,30 @@
+{
+  "name": "Homegear",
+  "version": "0.70.3",
+  "slug": "homegear",
+  "description": "Homegear as a Hassio add-on",
+  "startup": "services",
+  "boot": "auto",
+  "webui": "http://[HOST]:[PORT:2001]",
+  "auto_uart": true,
+  "gpio": true,
+  "privileged": [
+    "SYS_ADMIN",
+    "SYS_RAWIO"
+  ],
+  "map": [
+	  "config:rw", 
+	  "share:rw"
+  ],
+  "ports": {
+    "2001": 2001,
+    "2002": 2002,
+    "2003": 2003
+  },
+  "environment": {
+  },
+  "options": {
+  },
+  "schema": {
+  }
+}
