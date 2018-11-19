@@ -1,10 +1,11 @@
 {
   "name": "Homegear",
-  "version": "0.7.9",
+  "version": "0.70.1",
   "slug": "rpi-homegear",
-  "description": "Homegear as a Hassio add-on",
+  "description": "Homegear as a Hassio add-on for RaspberryPi",
   "startup": "before",
   "boot": "auto",
+  "auto_uart": true,
   "gpio": true,
   "privileged": [
     "SYS_ADMIN",
@@ -21,8 +22,5 @@
   "options": {
   },
   "schema": {
-  },
-  "devices": [
-    "/dev/ttyAMA0:/dev/ttyAMA0:rwm"
-  ]
+  }
 }

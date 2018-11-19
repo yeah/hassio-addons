@@ -60,8 +60,8 @@ RUN \
     cp -R /var/lib/homegear /var/lib/homegear.data; \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-ENTRYPOINT ["/bin/bash", "-c", "/start.sh"]
+COPY run.sh /run.sh
+RUN chmod +x /run.sh
+ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
 
 EXPOSE 2001 2002 2003
