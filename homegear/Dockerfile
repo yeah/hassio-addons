@@ -51,7 +51,7 @@ COPY installNightly.sh /installNightly.sh
 RUN \
     touch /tmp/HOMEGEAR_STATIC_INSTALLATION; \
     wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key; \
-    echo 'deb https://homegear.eu/packages/Raspbian/ stretch/' >> /etc/apt/sources.list.d/homegear.list; \
+    echo 'deb https://homegear.eu/packages/Debian/ stretch/' >> /etc/apt/sources.list.d/homegear.list; \
     chmod +x /installNightly.sh; \
     /installNightly.sh; \
     rm -f /etc/homegear/dh1024.pem; \
