@@ -3,7 +3,7 @@
   "version": "0.70.2",
   "slug": "homegear-rpi",
   "description": "Homegear as a Hassio add-on for RaspberryPi",
-  "startup": "before",
+  "startup": "services",
   "boot": "auto",
   "auto_uart": true,
   "webui": "http://[HOST]:2001",
