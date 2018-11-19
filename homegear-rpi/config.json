@@ -5,7 +5,6 @@
   "description": "Homegear as a Hassio add-on for RaspberryPi",
   "startup": "services",
   "boot": "auto",
-  "auto_uart": true,
   "webui": "http://[HOST]:2001",
   "gpio": true,
   "privileged": [
@@ -26,5 +25,9 @@
   "options": {
   },
   "schema": {
-  }
+  },
+  "devices": [
+    "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
+    "/dev/ttyACM0:/dev/ttyACM0:rwm"
+  ]
 }
