@@ -1,7 +1,7 @@
 {
   "name": "Homegear-Rpi",
-  "version": "0.70.1",
-  "slug": "rpi-homegear",
+  "version": "0.70.2",
+  "slug": "homegear-rpi",
   "description": "Homegear as a Hassio add-on for RaspberryPi",
   "startup": "before",
   "boot": "auto",
@@ -12,7 +12,10 @@
     "SYS_ADMIN",
     "SYS_RAWIO"
   ],
-  "map": ["config:rw", "share:rw"],
+  "map": [
+	  "config:rw", 
+	  "share:rw"
+  ],
   "ports": {
     "2001": 2001,
     "2002": 2002,
