@@ -45,6 +45,8 @@ RUN \
 #    cp -R /etc/homegear /etc/homegear.config; \
 #    cp -R /var/lib/homegear /var/lib/homegear.data; \
 #    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ARG BUILD_ARCH
+ENV architecture=${BUILD_ARCH}
 COPY installNightly.sh /installNightly.sh
 RUN \
     touch /tmp/HOMEGEAR_STATIC_INSTALLATION; \
