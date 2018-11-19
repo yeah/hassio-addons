@@ -6,6 +6,7 @@
   "startup": "before",
   "boot": "auto",
   "auto_uart": true,
+  "webui": "http://[HOST]:2001
   "gpio": true,
   "privileged": [
     "SYS_ADMIN",
