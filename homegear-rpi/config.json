@@ -5,7 +5,6 @@
   "description": "Homegear as a Hassio add-on for RaspberryPi",
   "startup": "services",
   "boot": "auto",
-  "webui": "http://[HOST]:2001",
   "gpio": true,
   "privileged": [
     "SYS_ADMIN",
