@@ -6,6 +6,7 @@
   "startup": "services",
   "boot": "auto",
   "webui": "http://[HOST]:[PORT:2001]",
+  "auto_uart": true,
   "gpio": true,
   "privileged": [
     "SYS_ADMIN",
@@ -25,9 +26,5 @@
   "options": {
   },
   "schema": {
-  },
-  "devices": [
-    "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
-    "/dev/ttyACM0:/dev/ttyACM0:rwm"
-  ]
+  }
 }
