@@ -1,12 +1,12 @@
 {
-  "name": "Homegear",
+  "name": "Homegear-Rpi",
   "version": "0.70.1",
   "slug": "rpi-homegear",
   "description": "Homegear as a Hassio add-on for RaspberryPi",
   "startup": "before",
   "boot": "auto",
   "auto_uart": true,
-  "webui": "http://[HOST]:2001
+  "webui": "http://[HOST]:2001",
   "gpio": true,
   "privileged": [
     "SYS_ADMIN",
