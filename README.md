@@ -16,16 +16,7 @@ Homegear usually stores its database and other variable data in `/var/lib/homege
 
 Homegear logs will be in `/share/homegear/log`.
 
-### MAX! Device
-
-#### Reset MAX! Devices
-
-You must reset you MAX! Devices to add it to a new Homegear installation with CUL Adapter. 
-
-1. Put out the Batteries
-2. Wait until 60 Seconds
-3. Hold the 3 buttens () pressed while inserting the Batteries
-4. In display shows "rES"
+More informations in the [Wiki](https://github.com/kreativmonkey/hassio-addons/wiki).
 
 ## Known Issues
 
