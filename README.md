@@ -1,18 +1,12 @@
 # Homegear as a Hassio add-on
 
-This add-on repository contains the Homegear add-on for Hassio (Home Assistant).
+This add-on repository contains the Homegear add-on for Hassio (Home Assistant). There are two different add-ons, one for Raspberry-Pi and the other for all other plattforms. 
 
 ## Installation
 
-Add this repo to Hassio as [described here](https://home-assistant.io/hassio/installing_third_party_addons/) and install the **Homegear** add-on.
+Add this repo to Hassio as [described here](https://home-assistant.io/hassio/installing_third_party_addons/) and install the **Homegear** ore **Homegear-Rpi** add-on.
 
-Don't get nervous after you've hit **Install**. Depending on your hardware, it may take up to half an hour before Homegear is installed. Once it appears in the list of installed add-ons, you'll have to **open** and **start** it.
-
-## Debug
-
-```
-docker exec -it <mycontainer> bash
-```
+Don't get nervous after you've hit **Install**. Depending on your hardware and network, it may take up to half an hour before Homegear is installed. Once it appears in the list of installed add-ons, you'll have to **open** and **start** it.
 
 ## How it works
 
@@ -33,16 +27,27 @@ You must reset you MAX! Devices to add it to a new Homegear installation with CU
 3. Hold the 3 buttens () pressed while inserting the Batteries
 4. In display shows "rES"
 
+## Known Issues
+
+At the moment you need to [fix folder rights]( https://community.home-assistant.io/t/homegear-add-on-for-hassio/35169/19?u=kreativmonkey) after the first installation.
+
 ## Limitations
 
-Works for me™, but your mileage may vary. I've tested Homematic/MAX! with an Raspberry Pi 3 and an [SCC](http://busware.de/tiki-index.php?page=SCC) so far.
+Works for me™, but your mileage may vary. I've tested Homematic/MAX! with an Raspberry Pi 3b+, Raspberry Pi 2b and the Hass.io container and an MAX! Cube with [CUL Firmware](https://community.home-assistant.io/t/converting-a-max-cube-to-cul-cun-to-use-with-home-assistant/74218).
 
-This add-on will only work on Raspberry Pi due to the fact that the `resin/rpi-raspbian:stretch` base image is used.
+At the moment this add-on needs two different dockerfiles to work on different hardware. I hope to replace the homegear-rpi add-on in future to provite one add-on for all plattforms.
 
 Pull requests are *very* welcome, especially to make this add-on work on other platforms.
 
+## Debug
+
+```
+docker exec -it <mycontainer> bash
+```
+
 ## License
 
+Copyright (c) 2018 Sebastian (@kreativmonkey on GitHub).
 Copyright (c) 2017 Jan (@yeah on GitHub).
 
 Permission is hereby granted, free of charge, to any person obtaining
