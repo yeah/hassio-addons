@@ -18,17 +18,15 @@ Homegear logs will be in `/share/homegear/log`.
 
 More informations in the [Wiki](https://github.com/kreativmonkey/hassio-addons/wiki).
 
-## Known Issues
-
-At the moment you need to [fix folder rights]( https://community.home-assistant.io/t/homegear-add-on-for-hassio/35169/19?u=kreativmonkey) after the first installation.
-
 ## Limitations
 
 Works for me™, but your mileage may vary. I've tested Homematic/MAX! with an Raspberry Pi 3b+, Raspberry Pi 2b and the Hass.io container and an MAX! Cube with [CUL Firmware](https://community.home-assistant.io/t/converting-a-max-cube-to-cul-cun-to-use-with-home-assistant/74218).
 
 At the moment this add-on needs two different dockerfiles to work on different hardware. I hope to replace the homegear-rpi add-on in future to provite one add-on for all plattforms.
 
-Pull requests are *very* welcome, especially to make this add-on work on other platforms.
+# Contribution
+
+You are welcome to open new issues for feature requests ore problems. Also pull requests are *very* welcome, especially to make this add-on work on other platforms.
 
 ## Debug
 
