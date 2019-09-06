@@ -26,4 +26,10 @@
     "/dev/ttyAMA0:/dev/ttyAMA0:rwm",
     "/dev/ttyACM0:/dev/ttyACM0:rwm"
   ]
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7",
+    "i386"
+  ]
 }
