@@ -3,6 +3,7 @@
   "version": "0.70.4",
   "slug": "homegear-rpi",
   "description": "Homegear as a Hassio add-on for RaspberryPi",
+  "arch": ["amd64"],
   "startup": "services",
   "boot": "auto",
   "webui": "http://[HOST]:[PORT:2001]",
