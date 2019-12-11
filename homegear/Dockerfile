@@ -1,7 +1,10 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
 ARG BUILD_FROM
+ARG BUILD_ARCH
+
 FROM $BUILD_FROM
 MAINTAINER Kreativmonkey <kreativmonkey@calyrium.org>
+
 
 RUN \
     apt-get update && apt-get -y install \
@@ -46,9 +49,8 @@ RUN \
 #    cp -R /etc/homegear /etc/homegear.config; \
 #    cp -R /var/lib/homegear /var/lib/homegear.data; \
 #    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-ARG BUILD_ARCH
 ENV architecture=${BUILD_ARCH}
-COPY installNightly.sh /installNightly.sh
+COPY script/installNightly.sh /installNightly.sh
 RUN \
     touch /tmp/HOMEGEAR_STATIC_INSTALLATION; \
     wget https://homegear.eu/packages/Release.key && apt-key add Release.key && rm Release.key; \
@@ -62,7 +64,7 @@ RUN \
     cp -R /var/lib/homegear /var/lib/homegear.data; \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY run.sh /run.sh
+COPY script/run.sh /run.sh
 RUN chmod +x /run.sh
 ENTRYPOINT ["/bin/bash", "-c", "/run.sh"]
 
