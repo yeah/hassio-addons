@@ -1,6 +1,7 @@
 # Taken from https://github.com/Homegear/Homegear-Docker/blob/master/rpi-stable/Dockerfile
-FROM debian:stretch
-MAINTAINER Sathya Laufer <sathya@homegear.email>
+ARG BUILD_FROM
+FROM $BUILD_FROM
+MAINTAINER Kreativmonkey <kreativmonkey@calyrium.org>
 
 RUN \
     apt-get update && apt-get -y install \
