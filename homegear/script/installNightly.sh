@@ -129,7 +129,7 @@ installModule homegear-rs2w_current_${system}_${arch}.deb
 installModule homegear-rsl_current_${system}_${arch}.deb
 installModule homegear-zwave_current_${system}_${arch}.deb
 installModule homegear-mbus_current_${system}_${arch}.deb
-installModule homegear-ccu2_current_${system}_${arch}.deb
+installModule homegear-ccu_current_${system}_${arch}.deb
 installModule homegear-easycam_current_${system}_${arch}.deb
 installModule homegear-easyled_current_${system}_${arch}.deb
 installModule homegear-easyled2_current_${system}_${arch}.deb
