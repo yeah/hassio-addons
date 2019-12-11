@@ -144,4 +144,4 @@ rm -f /etc/homegear/homegear.crt
 
 cd $SCRIPTDIR
 rm -Rf $TEMPDIR
-rm -f /InstallNightly.sh
+rm -f InstallNightly.sh

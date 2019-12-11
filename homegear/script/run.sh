@@ -21,7 +21,7 @@ sed -i -e "s/^${USER}:\([^:]*\):[0-9]*:[0-9]*/${USER}:\1:${USER_ID}:${USER_GID}/
 sed -i -e "s/^${USER}:\([^:]*\):[0-9]*/${USER}:\1:${USER_GID}/" /etc/group
 
 mkdir -p /config/homegear /share/homegear/lib /share/homegear/log
-chown homegear:homegear /config/homegear /share/homegear/lib /share/homegear/log
+chown $USER:$USER /config/homegear /share/homegear/lib /share/homegear/log
 rm -Rf /etc/homegear /var/lib/homegear /var/log/homegear
 ln -nfs /config/homegear     /etc/homegear
 ln -nfs /share/homegear/lib /var/lib/homegear
@@ -57,13 +57,13 @@ if ! [ -f /etc/homegear/dh1024.pem ]; then
 fi
 
 chown -R root:root /etc/homegear
-find /etc/homegear -type d -exec chmod 755 {} \;
+find /etc/homegear/ -type d -exec chmod 755 {} \;
 chown -R homegear:homegear /var/log/homegear/ 
 chown -R homegear:homegear /var/lib/homegear/
-find /var/log/homegear -type d -exec chmod 750 {} \;
-find /var/log/homegear -type f -exec chmod 640 {} \;
-find /var/lib/homegear -type d -exec chmod 750 {} \;
-find /var/lib/homegear -type f -exec chmod 640 {} \;
+find /var/log/homegear/ -type d -exec chmod 750 {} \;
+find /var/log/homegear/ -type f -exec chmod 640 {} \;
+find /var/lib/homegear/ -type d -exec chmod 750 {} \;
+find /var/lib/homegear/ -type f -exec chmod 640 {} \;
 
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
