@@ -5,6 +5,7 @@
   "description": "Homegear as a Hassio add-on",
   "startup": "services",
   "boot": "auto",
+  "arch": ["amd64"],
   "webui": "http://[HOST]:[PORT:2001]",
   "auto_uart": true,
   "gpio": true,
