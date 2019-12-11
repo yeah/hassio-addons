@@ -1,12 +1,17 @@
 # Homegear as a Hassio add-on
 
-This add-on repository contains the Homegear add-on for Hassio (Home Assistant). There are two different add-ons, one for Raspberry-Pi and the other for all other plattforms. 
+This is a add-on to install and use [homgear](https://homegear.eu/) on Hassio.
+
 
 ## Installation
 
-Add this repo to Hassio as [described here](https://home-assistant.io/hassio/installing_third_party_addons/) and install the **Homegear** ore **Homegear-Rpi** add-on.
+Follow these steps to get the add-on installed on your system:
 
-Don't get nervous after you've hit **Install**. Depending on your hardware and network, it may take up to half an hour before Homegear is installed. Once it appears in the list of installed add-ons, you'll have to **open** and **start** it.
+1. Navigate in your Home Assistant frontend to Hass.io -> Add-On Store
+2. Add the repository as [described here](https://home-assistant.io/hassio/installing_third_party_addons/)
+3. Find and install "Homegear" add-on
+
+Don't get nervous after you've hit **Install**. Depending on your hardware and network, it may take up to half an hour before Homegear is installed. Once it appears in the list of installed add-ons, you'll have to **open** and **start** it. I wan't to improve the installation speed soon.
 
 ## How it works
 
@@ -16,13 +21,12 @@ Homegear usually stores its database and other variable data in `/var/lib/homege
 
 Homegear logs will be in `/share/homegear/log`.
 
-More informations in the [Wiki](https://github.com/kreativmonkey/hassio-addons/wiki).
+More informations in the [Wiki](https://github.com/kreativmonkey/hassio-addons/wiki) (soon).
 
 ## Limitations
 
 Works for me™, but your mileage may vary. I've tested Homematic/MAX! with an Raspberry Pi 3b+, Raspberry Pi 2b and the Hass.io container and an MAX! Cube with [CUL Firmware](https://community.home-assistant.io/t/converting-a-max-cube-to-cul-cun-to-use-with-home-assistant/74218).
 
-At the moment this add-on needs two different dockerfiles to work on different hardware. I hope to replace the homegear-rpi add-on in future to provite one add-on for all plattforms.
 
 # Contribution
 
@@ -36,7 +40,7 @@ docker exec -it <mycontainer> bash
 
 ## License
 
-Copyright (c) 2018 Sebastian (@kreativmonkey on GitHub).
+Copyright (c) 2019 Sebastian (@kreativmonkey on GitHub).
 Copyright (c) 2017 Jan (@yeah on GitHub).
 
 Permission is hereby granted, free of charge, to any person obtaining
