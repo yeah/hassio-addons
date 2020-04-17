@@ -1,3 +1,8 @@
+# Version 0.71.0
+
+- Add native sidebare integration
+- Add Port-description
+
 # Version 0.70.4
 
 - Fix permission issues
