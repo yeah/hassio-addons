@@ -1,7 +1,11 @@
+
 # Version 0.71.0
 
 - Add native sidebare integration
 - Add Port-description
+- Add i386 support
+- Change container to Debian
+
 
 # Version 0.70.4
 
