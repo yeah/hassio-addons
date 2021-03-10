@@ -37,6 +37,12 @@ You are welcome to open new issues for feature requests ore problems. Also pull 
 ```
 docker exec -it <mycontainer> bash
 ```
+## Changelog
+
+### 0.9.1
+
+- adding support for RaspberryPi 4 (64Bit) [untested]
+- fix deprecadet auto_uart
 
 ## License
 
