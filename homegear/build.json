@@ -4,7 +4,8 @@
       "armhf": "homeassistant/armhf-base-raspbian:stretch",
       "aarch64": "homeassistant/aarch64-base-debian:stretch",
       "armv7": "homeassistant/armv7-base-debian:stretch",
-      "i386": "homeassistant/i386-base-debian:stretch"
+      "i386": "homeassistant/i386-base-debian:stretch",
+      "aarch64": "homeassistant/aarch64-base-debian:stretch"
     },
     "args": {
       "HOMGEAR_VERSION": "nightly"
