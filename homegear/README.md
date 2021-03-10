@@ -39,10 +39,7 @@ docker exec -it <mycontainer> bash
 ```
 ## Changelog
 
-### 0.9.1
-
-- adding support for RaspberryPi 4 (64Bit) [untested]
-- fix deprecadet auto_uart
+See ``CHANGELOG.md`` file.
 
 ## License
 
