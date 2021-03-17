@@ -72,6 +72,9 @@ find /var/lib/homegear/ -type f -exec chmod 640 {} \;
 
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+echo "HOMEGEARUSER=root" > /etc/default/homegear
+echo "HOMEGEARGROUP=root" >> /etc/default/homegear
+
 service homegear start
 service homegear-management start
 service homegear-influxdb start
