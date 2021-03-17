@@ -14,7 +14,11 @@ Documentation of changes to this project.
 
 ### Added
 - Logo to the Addon
-- Portsettings now marked as deprecated
+- Portsettings are now marked as Deprecated
+
+### Remove
+
+* remove the aarch64 architecture becouse there is no support from homegear for this
 
 ### Fixed
 - Fix faile nodeBlueCredentialKey.txt
