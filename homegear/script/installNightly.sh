@@ -16,12 +16,16 @@ function download {
 	wget https://homegear.eu/downloads/nightlies/${1} || exit 1
 }
 
-function installModule {
+function installPart {
 	dpkg -i ${1}
 	if [ $? -ne 0 ]; then
 		apt-get -y -f install || exit 1
 		dpkg -i ${1} || exit 1
 	fi
+}
+
+function installModule {
+	installPart ${1}
 }
 
 TEMPDIR=$(mktemp -d)
@@ -64,23 +68,12 @@ download homegear-management_current_${system}_${arch}.deb
 download homegear-webssh_current_${system}_${arch}.deb
 download homegear-adminui_current_${system}_${arch}.deb
 
-dpkg -i libhomegear-base_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i libhomegear-base_current_${system}_${arch}.deb || exit 1
-fi
 
-dpkg -i libhomegear-node_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i libhomegear-node_current_${system}_${arch}.deb || exit 1
-fi
 
-dpkg -i libhomegear-ipc_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i libhomegear-ipc_current_${system}_${arch}.deb || exit 1
-fi
+# Installing needet parts
+installPart libhomegear-base_current_${system}_${arch}.deb
+installPart libhomegear-node_current_${system}_${arch}.deb
+installPart libhomegear-ipc_current_${system}_${arch}.deb
 
 dpkg -i homegear_current_${system}_${arch}.deb
 if [ $? -ne 0 ]; then
@@ -92,30 +85,12 @@ if [ $? -ne 0 ]; then
 	fi
 fi
 
-dpkg -i homegear-nodes-core_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-nodes-core_current_${system}_${arch}.deb || exit 1
-fi
+installPart homegear-nodes-core_current_${system}_${arch}.deb
+installPart homegear-nodes-extra_current_${system}_${arch}.deb
+installPart homegear-licensing_current_${system}_${arch}.deb
+installPart homegear-easy-licensing_current_${system}_${arch}.deb
 
-dpkg -i homegear-nodes-extra_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-nodes-extra_current_${system}_${arch}.deb || exit 1
-fi
-
-dpkg -i homegear-licensing_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-licensing_current_${system}_${arch}.deb || exit 1
-fi
-
-dpkg -i homegear-easy-licensing_current_${system}_${arch}.deb
-if [ $? -ne 0 ]; then
-	apt-get -y -f install || exit 1
-	dpkg -i homegear-easy-licensing_current_${system}_${arch}.deb || exit 1
-fi
-
+# Installing Modules
 installModule homegear-homematicbidcos_current_${system}_${arch}.deb
 installModule homegear-homematicwired_current_${system}_${arch}.deb
 installModule homegear-insteon_current_${system}_${arch}.deb

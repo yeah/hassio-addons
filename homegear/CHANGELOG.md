@@ -4,9 +4,23 @@ Documentation of changes to this project.
 ## [Unreleased]
 
 - Support for Homeassistant Users
-- Fix folder mod
+- Fix folder permissions
 - add fix version of homegear
 - get addon working in the sidebar
+- access only from Hass (172.30.32.2)
+- adding apparmor
+
+## [0.72.1] - 2021-03-17
+
+### Added
+- Logo to the Addon
+- Portsettings now marked as deprecated
+
+### Fixed
+- Fix faile nodeBlueCredentialKey.txt
+- Fix wrong Ingress Port
+
+### Remove Port settings
 
 ## [0.72.0] - 2021-03-10
 

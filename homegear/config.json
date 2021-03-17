@@ -1,6 +1,6 @@
 {
   "name": "Homegear",
-  "version": "0.72.0",
+  "version": "0.72.1",
   "slug": "homegear",
   "description": "Homegear as a Hassio add-on",
   "arch": ["armv7", "aarch64" ,"armhf", "amd64", "i386"],
@@ -8,6 +8,7 @@
   "boot": "auto",
   "webui": "http://[HOST]:[PORT:2001]",
   "ingress": true,
+  "ingress_port": 2001,
   "panel_icon": "mdi:thermostat-box",
   "panel_title": "Homegear",
   "uart": true,
@@ -26,9 +27,9 @@
     "2003": 2003
   },
   "ports_description": {
-    "2001": "No SSL, no authentication",
-    "2002": "SSL enabled, authentication enabled",
-    "2003": "SSL and authentication enabled"
+    "2001": "Deprecated! No SSL, no authentication",
+    "2002": "Deprecated! SSL enabled, authentication enabled",
+    "2003": "Deprecated! SSL and authentication enabled"
   },
   "environment": {
   },
