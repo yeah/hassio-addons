@@ -9,6 +9,7 @@
   "webui": "http://[HOST]:[PORT:2001]",
   "ingress": true,
   "ingress_port": 2001,
+  "ingress_entry": "/admin",
   "panel_icon": "mdi:thermostat-box",
   "panel_title": "Homegear",
   "uart": true,
